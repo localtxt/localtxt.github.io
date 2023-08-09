@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>localtxt</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <main>
+        <!-- Your content here -->
+        <h2>write a secret</h2>
+        <form id="secret-form">
+            <label for="secret">your secret:</label>
+            <textarea id="secret" name="secret" rows="4" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        
+        <p class="small-text">Everything is Anonymous and for a book.</p>
+    </main>
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+    <script>
+        // Initialize EmailJS with your User ID
+        emailjs.init("KOLsD9VP2JToCGcR6");
+      
+        // Function to send the email
+        function sendEmail(secret) {
+          const templateParams = {
+            secret: secret
+          };
+      
+          emailjs.send("service_th00566", "template_b2a2y9r", templateParams)
+            .then(function(response) {
+              console.log("Email sent successfully:", response);
+              alert("Secret submitted successfully!");
+            }, function(error) {
+              console.error("Email sending error:", error);
+              alert("Error submitting secret. Please try again later.");
+            });
+        }
+      
+        // Handle form submission
+        document.getElementById("secret-form").addEventListener("submit", function(event) {
+          event.preventDefault();
+          const secret = document.getElementById("secret").value;
+          sendEmail(secret);
+
+        // Clear the textarea value
+        document.getElementById("secret").value = "";
+        });
+      </script>
+      
+</body>
+</html>
