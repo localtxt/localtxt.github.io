@@ -110,12 +110,19 @@ h2 {
     font-size: 30px;
 }
 
-@media (max-width: 768px) {
-    body {
-        font-size: 16px; /* Adjust the base font size for readability */
-    }
 
-    main {
-        padding: 1em; /* Reduce the padding for a more compact look */
-    }
+/* Style for the Instagram link */
+.instagram-link {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ECECEC;
+    text-align: center;
 }
+.instagram-link a {
+    color: #1c1c1c; /* Customize the link color */
+    text-decoration: none;
+}
+.instagram-link a:hover {
+    text-decoration: underline;
+}
+
