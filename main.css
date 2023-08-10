@@ -24,7 +24,9 @@ header {
     color: #ffffff;
     text-align: center;
     padding: 1.5em 0;
+    position: relative; /* Add this line to make positioning work */
 }
+
 
 main {
     background-color: #9e9e9e;
@@ -51,7 +53,11 @@ form {
     background-color: #9e9e9e;
     border-radius: 15px;
     padding: 30px;
-    
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    border: none; /* Remove the border */
+    outline: none; /* Remove the outline */
 }
 
 label {
@@ -66,7 +72,7 @@ label {
 textarea {
     width: 100%;
     padding: 15px;
-    border: 1px solid #ffffff;
+    border: 1px solid #9e9e9e;
     border-radius: 10px;
     font-size: 20px;
     resize: vertical;
@@ -75,6 +81,7 @@ textarea {
     background-color: #292929;
     margin: 0; /* Add this line to center the input */
     box-sizing: border-box; /* Ensure the padding is included in the width */
+    margin-bottom: 10px; /* Add margin at the bottom of the textarea */
 }
 
 button[type="submit"] {
@@ -88,12 +95,12 @@ button[type="submit"] {
     font-family: 'VT323', monospace;
     font-size: 30px;
     transition: background-color 0.3s ease;
+    margin-top: 10px; /* Add margin at the top of the button */
 }
 
 button[type="submit"]:hover {
     background-color: #212121;
 }
-
 h2 {
     font-family: 'VT323', monospace;
     font-size: 30px;
