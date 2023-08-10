@@ -109,3 +109,13 @@ h2 {
 #secret {
     font-size: 30px;
 }
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Adjust the base font size for readability */
+    }
+
+    main {
+        padding: 1em; /* Reduce the padding for a more compact look */
+    }
+}
